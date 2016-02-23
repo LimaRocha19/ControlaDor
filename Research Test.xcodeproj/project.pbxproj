@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1FFA56D1C7BDCF100BC55D3 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FFA56C1C7BDCF100BC55D3 /* TableViewController.swift */; };
+		A1FFA56E1C7BE1AD00BC55D3 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4CC52531C6F9767007163E3 /* HealthKit.framework */; };
 		E494ED351C63D37300997D7C /* SurveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E494ED341C63D37300997D7C /* SurveyTask.swift */; };
 		E4BEB41F1C63BD68004BBDB5 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4BEB41C1C63BD5D004BBDB5 /* ResearchKit.framework */; };
 		E4BEB4201C63BD68004BBDB5 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E4BEB41C1C63BD5D004BBDB5 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E4CC52501C6F6857007163E3 /* inventory.json in Resources */ = {isa = PBXBuildFile; fileRef = E4CC524F1C6F6857007163E3 /* inventory.json */; };
 		E4E6BE5D1C651D89000B7773 /* ORKTaskResultString.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E6BE5C1C651D89000B7773 /* ORKTaskResultString.swift */; };
 		E4F03B6A1C63AA8C006FDD92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F03B691C63AA8C006FDD92 /* AppDelegate.swift */; };
-		E4F03B6C1C63AA8C006FDD92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F03B6B1C63AA8C006FDD92 /* ViewController.swift */; };
 		E4F03B6F1C63AA8C006FDD92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4F03B6D1C63AA8C006FDD92 /* Main.storyboard */; };
 		E4F03B711C63AA8C006FDD92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4F03B701C63AA8C006FDD92 /* Assets.xcassets */; };
 		E4F03B741C63AA8C006FDD92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4F03B721C63AA8C006FDD92 /* LaunchScreen.storyboard */; };
@@ -76,6 +77,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A1FFA56C1C7BDCF100BC55D3 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		E494ED341C63D37300997D7C /* SurveyTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyTask.swift; sourceTree = "<group>"; };
 		E4BEB4151C63BD5D004BBDB5 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ../ResearchKit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
 		E4CC524F1C6F6857007163E3 /* inventory.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = inventory.json; sourceTree = "<group>"; };
@@ -83,7 +85,6 @@
 		E4E6BE5C1C651D89000B7773 /* ORKTaskResultString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ORKTaskResultString.swift; sourceTree = "<group>"; };
 		E4F03B661C63AA8C006FDD92 /* Research Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Research Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4F03B691C63AA8C006FDD92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E4F03B6B1C63AA8C006FDD92 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E4F03B6E1C63AA8C006FDD92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E4F03B701C63AA8C006FDD92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4F03B731C63AA8C006FDD92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -103,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1FFA56E1C7BE1AD00BC55D3 /* HealthKit.framework in Frameworks */,
 				E4BEB41F1C63BD68004BBDB5 /* ResearchKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,7 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				E4F03B691C63AA8C006FDD92 /* AppDelegate.swift */,
-				E4F03B6B1C63AA8C006FDD92 /* ViewController.swift */,
+				A1FFA56C1C7BDCF100BC55D3 /* TableViewController.swift */,
 				E4F03BA91C63AE61006FDD92 /* ConsentDocument.swift */,
 				E4F03BAC1C63B2CB006FDD92 /* ConsentTask.swift */,
 				E494ED341C63D37300997D7C /* SurveyTask.swift */,
@@ -349,7 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4E6BE5D1C651D89000B7773 /* ORKTaskResultString.swift in Sources */,
-				E4F03B6C1C63AA8C006FDD92 /* ViewController.swift in Sources */,
+				A1FFA56D1C7BDCF100BC55D3 /* TableViewController.swift in Sources */,
 				E4F03BAD1C63B2CB006FDD92 /* ConsentTask.swift in Sources */,
 				E494ED351C63D37300997D7C /* SurveyTask.swift in Sources */,
 				E4F03BAA1C63AE61006FDD92 /* ConsentDocument.swift in Sources */,
