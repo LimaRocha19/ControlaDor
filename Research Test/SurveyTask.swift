@@ -30,14 +30,8 @@ public var SurveyTask: ORKOrderedTask {
 
     let instructionStep = ORKInstructionStep(identifier: "IntroStep")
     instructionStep.title = "Inventário breve de dor"
-    instructionStep.text = "Preencha os dados que os enviaremos ao médico de sua preferência."
+    instructionStep.text = "Preencha os dados seguintes relativos à intensidade"
     steps.append(instructionStep)
-
-    let nameAnswerFormat = ORKTextAnswerFormat(maximumLength: 20)
-    nameAnswerFormat.multipleLines = false
-    let nameQuestionStepTitle = "Qual o seu nome completo?"
-    let nameQuestionStep = ORKQuestionStep(identifier: "Nome", title: nameQuestionStepTitle, answer: nameAnswerFormat)
-    steps.append(nameQuestionStep)
 
     let questQuestionStepTitle = "Durante a vida, a maioria das pessoas apresenta dor de vez em quando (dor de cabeça, dor de dente, etc). Você teve uma dor diferente dessas?"
     let textChoices = [
@@ -51,27 +45,13 @@ public var SurveyTask: ORKOrderedTask {
     for question in questions {
         let dictionary = question.1 as! [String : String]
         let scaleAnswerFormat = ORKAnswerFormat.continuousScaleAnswerFormatWithMaximumValue(10, minimumValue: 0, defaultValue: 0, maximumFractionDigits: 2, vertical: false, maximumValueDescription: "", minimumValueDescription: "")
-    
         let scaleQuestionStep = ORKQuestionStep(identifier: dictionary["identifier"]!, title: dictionary["question"]!, answer: scaleAnswerFormat)
         steps.append(scaleQuestionStep)
     }
 
-    let medicineQuestionStepTitle = "Quais medicamentos ou tratamentos para dor você está recebendo para dor?"
-    let medicineQuestionStep = ORKFormStep(identifier: "Tratamentos ou medicações", title: medicineQuestionStepTitle, text: nil)
-    var items = [ORKFormItem]()
-    let medicineText = ORKTextAnswerFormat(maximumLength: 20)
-    medicineText.multipleLines = false
-    let medicineDate = ORKDateAnswerFormat(style: .Date, defaultDate: NSDate(), minimumDate: nil, maximumDate: NSDate(), calendar: NSCalendar(identifier: NSCalendarIdentifierGregorian))
-    let treatment = ORKFormItem(identifier: "Tratamento ou medicação", text: "Nome", answerFormat: medicineText)
-    let frequency = ORKFormItem(identifier: "Dose/Frequência", text: "Dose/Frequência", answerFormat: medicineText)
-    let date = ORKFormItem(identifier: "Data de Início", text: "Data de Início", answerFormat: medicineDate)
-    items = [treatment, frequency, date]
-    medicineQuestionStep.formItems = items
-    steps.append(medicineQuestionStep)
-
     let summaryStep = ORKCompletionStep(identifier: "SummaryStep")
     summaryStep.title = "Fim"
-    summaryStep.text = "Enviaremos seus dados ao doutor."
+    summaryStep.text = "Seus dados estão atualizados"
     steps.append(summaryStep)
 
     return ORKOrderedTask(identifier: "SurveyTask", steps: steps)

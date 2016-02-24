@@ -12,15 +12,12 @@ import ResearchKit
 class TableViewController: UITableViewController, ORKTaskViewControllerDelegate {
     
     let userData = [("Nome","Isaías Lima") , ("Peso","62kg") , ("Nascimento","11/09/1995") , ("e-mail","isaiahlima18@gmail.com")]
+    @IBOutlet weak var headerView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        headerView.frame.size.height = 400
     }
 
     // MARK: - Table view data source
@@ -53,7 +50,7 @@ class TableViewController: UITableViewController, ORKTaskViewControllerDelegate 
         case 1:
             let cell = tableView.dequeueReusableCellWithIdentifier("button", forIndexPath: indexPath)
             if indexPath.row == 0 {
-                cell.textLabel?.text = "Breve inventário sobre a dor"
+                cell.textLabel?.text = "Inventário breve de dor"
             } else {
                 cell.textLabel?.text = "Marcar consulta"
             }
