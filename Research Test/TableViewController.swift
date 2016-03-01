@@ -75,7 +75,7 @@ class TableViewController: UITableViewController, ORKTaskViewControllerDelegate 
         print(results)
         taskViewController.dismissViewControllerAnimated(true, completion: nil)
     }
-    
+
     /*
     // MARK: - Navigation
 

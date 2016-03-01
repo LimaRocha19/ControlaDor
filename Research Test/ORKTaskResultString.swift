@@ -28,7 +28,7 @@ extension ORKTaskViewController {
                 }
                 let finalTaskResultKey = "\(identifier!)"
                 taskResultsDictionary[finalTaskResultKey] = finalTaskResultValue
-            } else if leResultado.first != nil && leResultado.count == 3 {
+            } else if leResultado.first != nil && leResultado.count > 1 {
                 for leObjeto in leResultado {
                     let answer = leObjeto.valueForKey("answer")
                     let identifier = leObjeto.valueForKey("identifier")
