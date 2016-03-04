@@ -86,4 +86,14 @@ class TableViewController: UITableViewController, ORKTaskViewControllerDelegate 
     }
     */
 
+    func taskViewController(taskViewController: ORKTaskViewController, viewControllerForStep step: ORKStep) -> ORKStepViewController? {
+        if step.identifier == "HumanBody" {
+            let controller = ViewController.instantiateViewControllerFromStoryboard(UIStoryboard(name: "Main", bundle: nil))
+            controller?.step = step
+            controller?.continueButtonTitle = "Next"
+            return controller
+        }
+        return nil
+    }
+
 }

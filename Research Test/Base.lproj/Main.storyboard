@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Table View Controller-->
@@ -33,7 +34,7 @@
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="userData" textLabel="qIo-BU-5Fg" detailTextLabel="pvW-Ew-hAO" style="IBUITableViewCellStyleValue1" id="f9Z-eN-X4s">
-                                <rect key="frame" x="0.0" y="513.5" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="514" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f9Z-eN-X4s" id="q3G-d7-KWA">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -57,7 +58,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="button" textLabel="Ul2-FU-IUt" style="IBUITableViewCellStyleDefault" id="7iW-cx-Q4e">
-                                <rect key="frame" x="0.0" y="557.5" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="558" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7iW-cx-Q4e" id="idD-lw-FND">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -108,8 +109,96 @@
             </objects>
             <point key="canvasLocation" x="394" y="257"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="HAs-CB-pxu">
+            <objects>
+                <viewController storyboardIdentifier="HumanBodyPain" id="mF8-hV-V4b" customClass="ViewController" customModule="Research_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fbl-AJ-tFX"/>
+                        <viewControllerLayoutGuide type="bottom" id="idS-Ti-W0D"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tbF-fN-HeF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HumanBodyFront" translatesAutoresizingMaskIntoConstraints="NO" id="erQ-LR-n16">
+                                <rect key="frame" x="198" y="28" width="205" height="482"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="482" id="1LF-eY-Dsy"/>
+                                    <constraint firstAttribute="width" constant="205" id="A2n-PE-h17"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BC8-IA-SHn" userLabel="MainImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIr-4m-CEF">
+                                <rect key="frame" x="430" y="538" width="150" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="ch1-de-eeb"/>
+                                    <constraint firstAttribute="height" constant="42" id="ndT-34-SWP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Seguinte">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextStep:" destination="mF8-hV-V4b" eventType="touchUpInside" id="T3a-0V-8qX"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="E4k-Zw-Rvg">
+                                <rect key="frame" x="20" y="538" width="150" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="ONi-jJ-A6a"/>
+                                    <constraint firstAttribute="height" constant="42" id="r8f-BE-JfW"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Frente"/>
+                                    <segment title="Trás"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="mF8-hV-V4b" eventType="valueChanged" id="nTl-hW-NVs"/>
+                                </connections>
+                            </segmentedControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DU5-L0-XyZ" userLabel="TempImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BC8-IA-SHn" firstAttribute="leading" secondItem="tbF-fN-HeF" secondAttribute="leading" id="1dK-zb-moM"/>
+                            <constraint firstItem="E4k-Zw-Rvg" firstAttribute="leading" secondItem="tbF-fN-HeF" secondAttribute="leadingMargin" id="4AD-QF-iRO"/>
+                            <constraint firstItem="erQ-LR-n16" firstAttribute="centerY" secondItem="tbF-fN-HeF" secondAttribute="centerY" constant="-31" id="6Wf-KK-X22"/>
+                            <constraint firstItem="BC8-IA-SHn" firstAttribute="top" secondItem="tbF-fN-HeF" secondAttribute="top" id="6yM-jF-6dE"/>
+                            <constraint firstItem="DU5-L0-XyZ" firstAttribute="top" secondItem="tbF-fN-HeF" secondAttribute="top" id="7mD-Bo-MPr"/>
+                            <constraint firstItem="idS-Ti-W0D" firstAttribute="top" secondItem="BC8-IA-SHn" secondAttribute="bottom" id="BVW-Tn-mxB"/>
+                            <constraint firstItem="DU5-L0-XyZ" firstAttribute="leading" secondItem="tbF-fN-HeF" secondAttribute="leading" id="CSe-GG-j7g"/>
+                            <constraint firstAttribute="trailing" secondItem="DU5-L0-XyZ" secondAttribute="trailing" id="Ntq-gm-78Q"/>
+                            <constraint firstItem="idS-Ti-W0D" firstAttribute="top" secondItem="MIr-4m-CEF" secondAttribute="bottom" constant="20" id="Pmo-OU-AmQ"/>
+                            <constraint firstItem="erQ-LR-n16" firstAttribute="centerX" secondItem="tbF-fN-HeF" secondAttribute="centerX" constant="0.5" id="XJq-Ax-hd4"/>
+                            <constraint firstAttribute="trailing" secondItem="BC8-IA-SHn" secondAttribute="trailing" id="Ysa-XT-3uD"/>
+                            <constraint firstItem="idS-Ti-W0D" firstAttribute="top" secondItem="E4k-Zw-Rvg" secondAttribute="bottom" constant="20" id="iRv-Kw-ucq"/>
+                            <constraint firstItem="idS-Ti-W0D" firstAttribute="top" secondItem="DU5-L0-XyZ" secondAttribute="bottom" id="m9p-aP-X7b"/>
+                            <constraint firstItem="MIr-4m-CEF" firstAttribute="trailing" secondItem="tbF-fN-HeF" secondAttribute="trailingMargin" id="mAU-q0-kyT"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <outlet property="bodyImageView" destination="erQ-LR-n16" id="fCj-6j-vnh"/>
+                        <outlet property="mainImageView" destination="BC8-IA-SHn" id="DtF-Qt-WlQ"/>
+                        <outlet property="nextButton" destination="MIr-4m-CEF" id="1H5-bu-djN"/>
+                        <outlet property="tempImageView" destination="DU5-L0-XyZ" id="qyO-S8-wHG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dce-0r-j48" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="394" y="921"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="HumanBodyFront" width="430" height="1118"/>
         <image name="happy" width="236" height="236"/>
     </resources>
 </document>
