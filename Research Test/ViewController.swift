@@ -8,7 +8,11 @@
 
 import UIKit
 import ResearchKit
-import CoreMotion
+
+enum HumanBodyTipe {
+    case Front
+    case Back
+}
 
 class ViewController: ORKStepViewController {
 
@@ -16,6 +20,8 @@ class ViewController: ORKStepViewController {
     @IBOutlet weak var tempImageView: UIImageView!
     @IBOutlet weak var bodyImageView: UIImageView!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var eraseButton: UIButton!
+    var bodyImage = UIImage(named: "HumanBodyFront")
 
     // MARK: - Coloring properties
     var lastPoint = CGPointZero
@@ -31,26 +37,26 @@ class ViewController: ORKStepViewController {
         nextButton.layer.cornerRadius = 3
         nextButton.layer.borderWidth = 1
         nextButton.layer.borderColor = UIColor(red: 0, green: 122/255, blue: 1, alpha: 1).CGColor
+
+        eraseButton.layer.cornerRadius = 3
+        eraseButton.layer.borderWidth = 1
+        eraseButton.layer.borderColor = UIColor(red: 0, green: 122/255, blue: 1, alpha: 1).CGColor
+        bodyImageView.image = bodyImage
     }
 
-    override func motionBegan(motion: UIEventSubtype, withEvent event: UIEvent?) {
-        if event?.subtype == UIEventSubtype.MotionShake {
-            let alertController = UIAlertController(title: "Desfazer desenho", message: "", preferredStyle: .Alert)
-            let ok = UIAlertAction(title: "Ok", style: .Default, handler: { (action) -> Void in
-                self.reset(self)
-            })
-            let cancel = UIAlertAction(title: "Cancelar", style: .Cancel, handler: { (action) -> Void in
-            })
-            alertController.addAction(ok)
-            alertController.addAction(cancel)
-            presentViewController(alertController, animated: true, completion: nil)
+    func bodyTypeSet(type: HumanBodyTipe) {
+        switch type {
+        case .Front:
+            bodyImage = UIImage(named: "HumanBodyFront")
+        case .Back:
+            bodyImage = UIImage(named: "HumanBodyBack")
         }
     }
 
     // MARK: - Storyboard init
 
-    class func instantiateViewControllerFromStoryboard(storyboard: UIStoryboard) -> ORKStepViewController? {
-        return storyboard.instantiateViewControllerWithIdentifier("HumanBodyPain") as? ORKStepViewController
+    class func instantiateViewControllerFromStoryboard(storyboard: UIStoryboard) -> ViewController? {
+        return storyboard.instantiateViewControllerWithIdentifier("HumanBodyPain") as? ViewController
     }
 
     // MARK: - Drawing methods
@@ -108,15 +114,6 @@ class ViewController: ORKStepViewController {
     }
 
     // MARK: - Actions
-
-    @IBAction func segmentChanged(sender: UISegmentedControl) {
-        reset(self)
-        if sender.selectedSegmentIndex == 0 {
-            bodyImageView.image = UIImage(named: "HumanBodyFront")
-        } else {
-            bodyImageView.image = UIImage(named: "HumanBodyBack")
-        }
-    }
 
     @IBAction func reset(sender: AnyObject) {
         mainImageView.image = nil

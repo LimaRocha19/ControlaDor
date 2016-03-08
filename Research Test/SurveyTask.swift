@@ -42,7 +42,7 @@ public var SurveyTask: ORKOrderedTask {
 
     // MARK: - If the user is feeling pain
 
-    let scaleAnswerFormat = ORKAnswerFormat.continuousScaleAnswerFormatWithMaximumValue(10, minimumValue: 0, defaultValue: 0, maximumFractionDigits: 2, vertical: false, maximumValueDescription: "", minimumValueDescription: "")
+    let scaleAnswerFormat = ORKAnswerFormat.continuousScaleAnswerFormatWithMaximumValue(10, minimumValue: 0, defaultValue: 0, maximumFractionDigits: 0, vertical: false, maximumValueDescription: "Sem dor", minimumValueDescription: "Dor excruciante")
 
     let questQuestionStepTitle = "Durante a vida, a maioria das pessoas apresenta dor de vez em quando (dor de cabeça, dor de dente, etc). Você teve uma dor diferente dessas?"
     let textChoices = [
@@ -57,13 +57,17 @@ public var SurveyTask: ORKOrderedTask {
     // MARK: - Body Shader
 
     let instruction = ORKInstructionStep(identifier: "Instrução para o desenho")
-    instruction.title = "Marque no desenho a seguir aonde você está sentindo dor"
+    instruction.title = "Marque nos desenhos a seguir aonde você está sentindo dor"
     instruction.text = "Agite o dispositivo para apagar os locais marcados"
     steps.append(instruction)
 
-    let step = ORKBodyShaderStep(identifier: "HumanBody")
-    step.title = "Marque no desenho abaixo aonde você está sentindo dor"
-    steps.append(step)
+    let step1 = ORKBodyShaderStep(identifier: "HumanBodyFront")
+    step1.title = "Marque no desenho abaixo aonde você está sentindo dor"
+    steps.append(step1)
+
+    let step2 = ORKBodyShaderStep(identifier: "HumanBodyBack")
+    step2.title = "Marque no desenho abaixo aonde você está sentindo dor"
+    steps.append(step2)
 
     // MARK:  - Pain intensity
 

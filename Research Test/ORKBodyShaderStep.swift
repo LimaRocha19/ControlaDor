@@ -10,6 +10,4 @@ import ResearchKit
 
 class ORKBodyShaderStep: ORKStep {
 
-
-
 }
