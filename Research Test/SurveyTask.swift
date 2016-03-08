@@ -58,7 +58,7 @@ public var SurveyTask: ORKOrderedTask {
 
     let instruction = ORKInstructionStep(identifier: "Instrução para o desenho")
     instruction.title = "Marque nos desenhos a seguir aonde você está sentindo dor"
-    instruction.text = "Agite o dispositivo para apagar os locais marcados"
+    instruction.text = "Toque e arraste para ir desenhando"
     steps.append(instruction)
 
     let step1 = ORKBodyShaderStep(identifier: "HumanBodyFront")
