@@ -34,7 +34,7 @@
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="userData" textLabel="qIo-BU-5Fg" detailTextLabel="pvW-Ew-hAO" style="IBUITableViewCellStyleValue1" id="f9Z-eN-X4s">
-                                <rect key="frame" x="0.0" y="513.5" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="514" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f9Z-eN-X4s" id="q3G-d7-KWA">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -44,7 +44,7 @@
                                             <rect key="frame" x="15" y="10" width="39" height="24"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pvW-Ew-hAO">
@@ -58,7 +58,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="button" textLabel="Ul2-FU-IUt" style="IBUITableViewCellStyleDefault" id="7iW-cx-Q4e">
-                                <rect key="frame" x="0.0" y="557.5" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="558" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7iW-cx-Q4e" id="idD-lw-FND">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -128,8 +128,8 @@
                                     <constraint firstAttribute="width" constant="205" id="A2n-PE-h17"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BC8-IA-SHn" userLabel="MainImageView">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="483"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BC8-IA-SHn" userLabel="MainImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIr-4m-CEF">
                                 <rect key="frame" x="430" y="538" width="150" height="42"/>
@@ -146,10 +146,6 @@
                                     <action selector="nextStep:" destination="mF8-hV-V4b" eventType="touchUpInside" id="T3a-0V-8qX"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DU5-L0-XyZ" userLabel="TempImageView">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="497"/>
-                                <gestureRecognizers/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWm-5F-IGi">
                                 <rect key="frame" x="20" y="538" width="150" height="42"/>
                                 <constraints>
@@ -165,6 +161,10 @@
                                     <action selector="reset:" destination="mF8-hV-V4b" eventType="touchUpInside" id="BtG-ld-65r"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DU5-L0-XyZ" userLabel="TempImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <gestureRecognizers/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>

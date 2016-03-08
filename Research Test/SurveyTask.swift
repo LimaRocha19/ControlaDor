@@ -11,7 +11,7 @@ import ResearchKit
 let path = NSBundle.mainBundle().pathForResource("inventory", ofType: "json")
 let JSONData = NSData(contentsOfFile: path!)
 
-public var SurveyTask: ORKOrderedTask {
+public var BriefPainInvetoryTask: ORKOrderedTask {
 
     // MARK: - parsing the json
 
@@ -58,7 +58,7 @@ public var SurveyTask: ORKOrderedTask {
 
     let instruction = ORKInstructionStep(identifier: "Instrução para o desenho")
     instruction.title = "Marque nos desenhos a seguir aonde você está sentindo dor"
-    instruction.text = "Toque e arraste para ir desenhando"
+    instruction.text = "Toque e arraste para ir desenhando\n1) Na frente de seu corpo\n2) Atrás de seu corpo"
     steps.append(instruction)
 
     let step1 = ORKBodyShaderStep(identifier: "HumanBodyFront")

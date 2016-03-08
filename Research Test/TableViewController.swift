@@ -62,7 +62,7 @@ class TableViewController: UITableViewController, ORKTaskViewControllerDelegate 
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 1 && indexPath.row == 0 {
-            let taskViewController = ORKTaskViewController(task: SurveyTask, taskRunUUID: nil)
+            let taskViewController = IRLTaskViewController(task: BriefPainInvetoryTask, taskRunUUID: nil)
             taskViewController.delegate = self
             taskViewController.outputDirectory = NSURL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0], isDirectory: true)
             presentViewController(taskViewController, animated: true, completion: nil)
@@ -72,7 +72,12 @@ class TableViewController: UITableViewController, ORKTaskViewControllerDelegate 
     func taskViewController(taskViewController: ORKTaskViewController, didFinishWithReason reason: ORKTaskViewControllerFinishReason, error: NSError?) {
         let taskResult = taskViewController.result
         let results = taskViewController.dictionaryWithTaskResult(taskResult)
-        print(results)
+        let images = [(taskViewController as! IRLTaskViewController).shaderFrontImage , (taskViewController as! IRLTaskViewController).shaderBackImage]
+        let doctorData = [results , images]
+        print(doctorData)
+
+        // Aguardando método de upload para o server
+
         taskViewController.dismissViewControllerAnimated(true, completion: nil)
     }
 
@@ -93,9 +98,11 @@ class TableViewController: UITableViewController, ORKTaskViewControllerDelegate 
         controller?.continueButtonTitle = "Next"
 
         if step.identifier == "HumanBodyFront" {
+            controller?.delegate = taskViewController
             controller?.bodyTypeSet(.Front)
             return controller
         } else if step.identifier == "HumanBodyBack" {
+            controller?.delegate = taskViewController
             controller?.bodyTypeSet(.Back)
             return controller
         }

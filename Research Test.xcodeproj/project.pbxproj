@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A1FFA56D1C7BDCF100BC55D3 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FFA56C1C7BDCF100BC55D3 /* TableViewController.swift */; };
 		A1FFA56E1C7BE1AD00BC55D3 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4CC52531C6F9767007163E3 /* HealthKit.framework */; };
+		E4507EAC1C8F2201006CCE91 /* IRLTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4507EAB1C8F2201006CCE91 /* IRLTaskViewController.swift */; };
 		E46868851C89F68600309888 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46868841C89F68600309888 /* ViewController.swift */; };
 		E46868891C8A086C00309888 /* ORKBodyShaderStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46868881C8A086C00309888 /* ORKBodyShaderStep.swift */; };
 		E494ED351C63D37300997D7C /* SurveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E494ED341C63D37300997D7C /* SurveyTask.swift */; };
@@ -80,6 +81,7 @@
 
 /* Begin PBXFileReference section */
 		A1FFA56C1C7BDCF100BC55D3 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		E4507EAB1C8F2201006CCE91 /* IRLTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRLTaskViewController.swift; sourceTree = "<group>"; };
 		E46868841C89F68600309888 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E46868881C8A086C00309888 /* ORKBodyShaderStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ORKBodyShaderStep.swift; sourceTree = "<group>"; };
 		E494ED341C63D37300997D7C /* SurveyTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyTask.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			children = (
 				E4F03B691C63AA8C006FDD92 /* AppDelegate.swift */,
 				A1FFA56C1C7BDCF100BC55D3 /* TableViewController.swift */,
+				E4507EAB1C8F2201006CCE91 /* IRLTaskViewController.swift */,
 				E46868841C89F68600309888 /* ViewController.swift */,
 				E4F03BA91C63AE61006FDD92 /* ConsentDocument.swift */,
 				E4F03BAC1C63B2CB006FDD92 /* ConsentTask.swift */,
@@ -359,6 +362,7 @@
 				E4E6BE5D1C651D89000B7773 /* ORKTaskResultString.swift in Sources */,
 				A1FFA56D1C7BDCF100BC55D3 /* TableViewController.swift in Sources */,
 				E4F03BAD1C63B2CB006FDD92 /* ConsentTask.swift in Sources */,
+				E4507EAC1C8F2201006CCE91 /* IRLTaskViewController.swift in Sources */,
 				E494ED351C63D37300997D7C /* SurveyTask.swift in Sources */,
 				E46868851C89F68600309888 /* ViewController.swift in Sources */,
 				E4F03BAA1C63AE61006FDD92 /* ConsentDocument.swift in Sources */,
