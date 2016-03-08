@@ -42,7 +42,7 @@ public var SurveyTask: ORKOrderedTask {
 
     // MARK: - If the user is feeling pain
 
-    let scaleAnswerFormat = ORKAnswerFormat.continuousScaleAnswerFormatWithMaximumValue(10, minimumValue: 0, defaultValue: 0, maximumFractionDigits: 0, vertical: false, maximumValueDescription: "Sem dor", minimumValueDescription: "Dor excruciante")
+    let scaleAnswerFormat = ORKAnswerFormat.continuousScaleAnswerFormatWithMaximumValue(10, minimumValue: 0, defaultValue: 0, maximumFractionDigits: 0, vertical: false, maximumValueDescription: "Dor excruciante", minimumValueDescription: "Sem dor")
 
     let questQuestionStepTitle = "Durante a vida, a maioria das pessoas apresenta dor de vez em quando (dor de cabeça, dor de dente, etc). Você teve uma dor diferente dessas?"
     let textChoices = [
